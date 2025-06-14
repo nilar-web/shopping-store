@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping Store</title>
+
+        <!-- link to css -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- remix icon -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+            rel="stylesheet" />
+
+        <!-- icon -->
+        <link rel="shortcut icon" href="images/nn.png" type="image/x-icon">
+    </head>
+    <body>
+
+        <!-- header -->
+        <header>
+            <!-- nav -->
+            <div class="nav container">
+                <!-- logo -->
+                <a href="#" class="logo">GG_ONLINE STORE.</a>
+                <!-- cart icon -->
+                <div class="cart-icon" id="cart-icon">
+                    <i class="ri-shopping-cart-fill"></i>
+                    <span id="cart-count">0</span>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- products -->
+        <div class="products container">
+
+            <div class="product-card">
+                <img src="images/product-1.jpg" alt
+                    class="product-image">
+                <h2 class="product-name">Perfume</h2>
+                <div class="product-info">
+                    <div class="price-data">
+                        <h2 class="product-price">$325</h2>
+                        <p>Details</p>
+                    </div>
+                    <div class="add-to-cart"
+                        onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-2.jpg" alt
+                    class="product-image">
+                <h2 class="product-name">Golden Perfume</h2>
+                <div class="product-info">
+                    <div class="price-data">
+                        <h2 class="product-price">$375</h2>
+                        <p>Details</p>
+                    </div>
+                    <div class="add-to-cart"
+                        onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-13.jpg" alt="product"
+                    class="product-image">
+                <h2 class="product-name">Shoulder Bag</h2>
+                <div class="product-info">
+                    <div class="price-data">
+                        <h2 class="product-price">$275</h2>
+                        <p>Details</p>
+                    </div>
+                    <div class="add-to-cart"
+                        onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-4.jpg" alt
+                    class="product-image">
+                <h2 class="product-name">Accessories</h2>
+                <div class="product-info">
+                    <div class="price-data">
+                        <h2 class="product-price">$150</h2>
+                        <p>Details</p>
+                    </div>
+                    <div class="add-to-cart"
+                        onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-5.jpg" alt
+                    class="product-image">
+                <h2 class="product-name">Guitar</h2>
+                <div class="product-info">
+                    <div class="price-data">
+                        <h2 class="product-price">$170</h2>
+                        <p>Details</p>
+                    </div>
+                    <div class="add-to-cart"
+                        onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-6.jpg" alt
+                    class="product-image">
+                <h2 class="product-name">luggage</h2>
+                <div class="product-info">
+                    <div class="price-data">
+                        <h2 class="product-price">$350</h2>
+                        <p>Details</p>
+                    </div>
+                    <div class="add-to-cart"
+                        onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-7.jpg" alt
+                    class="product-image">
+                <h2 class="product-name">METAL SUNGlASSES</h2>
+                <div class="product-info">
+                    <div class="price-data">
+                        <h2 class="product-price">$175</h2>
+                        <p>Details</p>
+                    </div>
+                    <div class="add-to-cart"
+                        onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-12.jpg" alt
+                    class="product-image">
+                <h2 class="product-name">Speaker Box</h2>
+                <div class="product-info">
+                    <div class="price-data">
+                        <h2 class="product-price">$125</h2>
+                        <p>Details</p>
+                    </div>
+                    <div class="add-to-cart"
+                        onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- cart Model -->
+        <div class="cart-model" id="cart-model">
+            <div class="cart-head">
+                <h2 class="cart-title">Your Cart</h2>
+                <button class="close-btn">x</button>
+            </div>
+            <ul id="cart-items">
+                <!-- Cart added items will appear inside this -->
+            </ul>
+            <div class="cart-total">
+                Total: $<span id="total-price">0</span>
+            </div>
+            <div class="checkout-btn">Buy Now</div>
+        </div>
+
+        <!-- link to js -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
